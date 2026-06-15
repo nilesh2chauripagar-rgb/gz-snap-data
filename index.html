@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GenZ Snap - The ultimate camera and social experience for the next generation.">
+    <title>GenZ Snap | The Ultimate Camera Experience</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #050505;
+            --text-main: #ffffff;
+            --text-muted: #888888;
+            --accent-gradient: linear-gradient(135deg, #FF0080, #7928CA);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Abstract Background Glow */
+        .glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: var(--accent-gradient);
+            filter: blur(150px);
+            opacity: 0.15;
+            border-radius: 50%;
+            top: -20%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            animation: pulse 8s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% { transform: translateX(-50%) scale(1); opacity: 0.15; }
+            100% { transform: translateX(-50%) scale(1.1); opacity: 0.25; }
+        }
+
+        nav {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 5%;
+        }
+
+        .badge {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(10px);
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -2px;
+        }
+
+        p.subtitle {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 0, 128, 0.3);
+        }
+
+        footer {
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--text-main);
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="glow"></div>
+    
+    <nav>
+        <div class="logo">GenZ Snap</div>
+    </nav>
+
+    <main>
+        <div class="badge">Available on Google Play</div>
+        <h1>Capture the<br>Moment.</h1>
+        <p class="subtitle">The ultimate camera and social experience built for the next generation. Express yourself with stunning filters, seamless sharing, and premium aesthetics.</p>
+        <a href="#" class="cta-button">Download Now</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 GenZ Snap. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="/app-ads.txt">app-ads.txt</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>
